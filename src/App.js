@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import './index.css';
 import './App.css';
 import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar';
@@ -8,15 +8,14 @@ function App() {
   return (
   <>
     <header id='contenedorHeader'>
-      <div className='contenedor'>
-      <NavBar/>
-        <h1 className="text-3xl font-bold underline">
-          Hello world!
-        </h1>
-      </div>
+        <nav>
+          <NavBar/>
+            
+        </nav>
     </header>
-    <FontAwesomeIcon icon={["fal", "coffee"]} />
-    <ItemListContainer greeting={'Proyecto Tienda React'}/>   
+    <section>
+    <ItemListContainer title={'Proyecto Tienda React'}/>   
+    </section>
 
   </>
   );

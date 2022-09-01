@@ -1,9 +1,8 @@
 import React from 'react';
-import logo from "../images/logo.png";
-const imagenTienda =  <img src={logo} alt="Logo Tienda"/>
+import { FaShoppingCart } from "react-icons/fa";
 const CartWidget = () => {
   return (
-    imagenTienda
+    <FaShoppingCart/>
   )
 }
 export default CartWidget

@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -16,12 +17,16 @@ code {
 }
 #contenedorHeader{
   background-color: aqua;
+  padding: 1.5rem;
 }
 .contenedor{
   display: flex;
+  align-items: center;
 }
 .listaNav{
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   list-style: none;
 }
 
