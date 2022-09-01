@@ -29,4 +29,8 @@ code {
   justify-content: space-between;
   list-style: none;
 }
+.botonCarrito {
+  background-color: transparent;
+  border: none;
+}
 
