@@ -8,14 +8,10 @@ function App() {
   return (
   <>
     <header id='contenedorHeader'>
-        <nav>
           <NavBar/>
             
-        </nav>
     </header>
-    <section>
-    <ItemListContainer title={'Proyecto Tienda React'}/>   
-    </section>
+    <ItemListContainer />   
 
   </>
   );

@@ -1,24 +1,23 @@
 [
-    {
- "idProducto": "0",
- "nombreProducto": "RASCADOR CIRCULAR CON RATON MOVIBLE Y PELOTA",
- "stockProducto": 3,
- "costoProducto":  1500,
- "imagen": "./images/rascadorCircular.jpeg"
-    },
-    {
- "idProducto": "1",
- "nombreProducto": "BOZAL de SILICONA",
- "stockProducto": 2,
- "costoProducto":  1300,
- "imagen": "./images/bozalDeSilicona.png"
-    },
-    {
- "idProducto": "2",
- "nombreProducto": "Dispenser Lavanda",
- "stockProducto": 10,
- "costoProducto":  500,
- "imagen": "./images/dispenserLavanda.jpeg"
-    }
-    
+   {
+      "id": "0",
+      "nombre": "RASCADOR CIRCULAR CON RATON MOVIBLE Y PELOTA",
+      "stock": 3,
+      "costo": 1500,
+      "imagen": "https://lamascoteca.com.ar/wp-content/uploads/2021/10/WhatsApp-Image-2021-10-16-at-4.16.29-AM-300x300.jpeg"
+   },
+   {
+      "id": "1",
+      "nombre": "BOZAL de SILICONA",
+      "stock": 2,
+      "costo": 1300,
+      "imagen": "../images/logo.png"
+   },
+   {
+      "id": "2",
+      "nombre": "Dispenser Lavanda",
+      "stock": 10,
+      "costo": 500,
+      "imagen": "../images/logo.png"
+   }
 ]

@@ -16,7 +16,7 @@ code {
     monospace;
 }
 #contenedorHeader{
-  background-color: aqua;
+  background-color: #282c34;
   padding: 1.5rem;
 }
 .contenedor{
@@ -26,11 +26,35 @@ code {
 .listaNav{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   list-style: none;
+}
+.listaNav a{
+  text-decoration: none;
+  color:white;
 }
 .botonCarrito {
   background-color: transparent;
   border: none;
+}
+.inicioPrograma{
+  text-align: center;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: 3em;
+}
+.mainSection{
+  display: flex;
+  padding-left: 7rem;
+  padding-right: 7rem;
+  padding-top: 3rem;
+}
+article{
+  width: 30%;
+  border: 2px solid black;
+  padding: 2rem;
+}
+.cardProducto{
+  display: flex;
 }
 
