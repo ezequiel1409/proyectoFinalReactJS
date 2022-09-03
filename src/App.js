@@ -9,10 +9,8 @@ function App() {
   <>
     <header id='contenedorHeader'>
           <NavBar/>
-            
     </header>
     <ItemListContainer />   
-
   </>
   );
 }

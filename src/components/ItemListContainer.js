@@ -6,7 +6,6 @@ import ItemList from './ItemList';
 const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([]);
-
       useEffect(() => {
           const getProductos =  () => {
             const products = JSON.parse(JSON.stringify(datosProductos))
@@ -28,11 +27,9 @@ const ItemListContainer = () => {
     
       return (
         <>
-        
         <section>
-        <ItemList productos={productos}/>
+          <ItemList productos={productos}/>
         </section>
-
         </>
       )
 

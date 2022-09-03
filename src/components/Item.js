@@ -1,7 +1,7 @@
 import React from "react"
-// import Toastify from 'toastify-js'
-// import "toastify-js/src/toastify.css"
-const Item = ({nombre, costo, imagen }) => {
+import ItemCount from "./ItemCount"
+
+const Item = ({id, nombre, costo, imagen, stock }) => {
     // const notify = () => Toastify({
     //     text: "Hola"
     // }).showToast();
@@ -18,7 +18,7 @@ const Item = ({nombre, costo, imagen }) => {
                 </div>
                 <div className="cardFooter">
                     {/* <button onClick={notify}>Agregar al carrito</button> */}
-                    <button >Agregar al carrito</button>
+                    <ItemCount key={id} stock={stock}/>
                 </div>
             </div>
         </div>
