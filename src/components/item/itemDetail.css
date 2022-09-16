@@ -1,0 +1,36 @@
+.container{
+    padding-left : 20rem;
+    padding-right: 20rem;
+  }
+  .articleIMG {
+    display: flex;
+    justify-content: center;
+  }
+  .articleIMG img{
+    width: 50% ;
+  }
+  .detailItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-top: 3rem;
+  }
+  .article{
+    border:  1px inset gray;
+    padding: 3rem;
+    display: flex;
+  }
+  .articleBody{
+    display: flex;
+    flex-direction: column;
+  }
+  .articlePrice{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .bodyArticle{
+    display: flex;
+    
+  }

@@ -2,8 +2,8 @@ import React from 'react'
 import {useState} from 'react';
 import Toastify from 'toastify-js'
 import "toastify-js/src/toastify.css"
-const ItemCount = ( {stock} ) => {
-    const [cantidad, setCantidadProductos] = useState(0);
+const ItemCount = ( {stock, initial, onAdd} ) => {
+    const [count, setCount] = useState(initial);
     const notificarProductoAgregado = () => Toastify({
         text: "Producto agregado al carrito!",
         duration: 2000,
@@ -24,12 +24,12 @@ const ItemCount = ( {stock} ) => {
       }
     }).showToast();
     const borrarProductoDelCarrito = () => {
-      setCantidadProductos(cantidad - 1);
-      console.log(cantidad)
+      setCount(count - 1);
+      console.log(count)
     };
     const agregarProductoAlCarrito = () => {
-      if(cantidad < stock){
-        setCantidadProductos(cantidad + 1);
+      if(count < stock){
+        setCount(count + 1);
         notificarProductoAgregado();   
       }
       else notificarError(); 
@@ -37,11 +37,13 @@ const ItemCount = ( {stock} ) => {
  return(
     <>
     <div className='parteSuperiorCardFooter'>
-        {<button disabled={cantidad===0} onClick={borrarProductoDelCarrito}>-</button>}
-        <p> {cantidad}</p>
-        {<button disabled={cantidad===stock} onClick={agregarProductoAlCarrito}>+</button>}
+        {<button disabled={count===initial} onClick={borrarProductoDelCarrito}>-</button>}
+        <p> {count}</p>
+        {<button disabled={count===stock} onClick={agregarProductoAlCarrito}>+</button>}
     </div>
-        {<button className='btnAgregarCarrito' disabled={cantidad===stock} onClick={agregarProductoAlCarrito}>Agregar al carrito</button> }
+    <div className='btnFooter'>
+        {<button className='btnAgregarCarrito' disabled={count===stock} onClick={agregarProductoAlCarrito}>Agregar al carrito</button> }
+    </div>
     </>
   )
 };

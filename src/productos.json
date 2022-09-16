@@ -1,23 +1,32 @@
 [
    {
       "id": "0",
+      "idCategoria": "00",
       "nombre": "RASCADOR CIRCULAR CON RATON MOVIBLE Y PELOTA",
+      "slug": "rascador-circular",
       "stock": 3,
+      "descripcion": "El ratón de peluche enganchado a la parte superior de este juguete y la bola que se mueve dentro del anillo despertarán el instinto de caza del gato. Los rascadores sacian los instintos de los gatos y los atraen a jugar en ellos, dejando a un lado muebles o alfombras del hogar.",
       "costo": 1500,
       "imagen": "https://lamascoteca.com.ar/wp-content/uploads/2021/10/WhatsApp-Image-2021-10-16-at-4.16.29-AM-300x300.jpeg"
    },
    {
       "id": "1",
+      "idCategoria": "01",
       "nombre": "BOZAL de SILICONA",
+      "descripcion": "Proporcionarán la seguridad de que tu perro podrá estar bajo control pero sin ser maltratado.",
+      "slug": "bozal-de-silicona",
       "stock": 2,
       "costo": 1300,
-      "imagen": "../images/logo.png"
+      "imagen": "https://lamascoteca.com.ar/wp-content/uploads/2021/10/Bozal-de-silicona-1-55.png"
    },
    {
       "id": "2",
+      "idCategoria": "02",
       "nombre": "Dispenser Lavanda",
+      "descripcion": "Está fabricado con materiales reciclados y tiene un práctico gancho en la parte trasera que sirve de soporte para las bolsas usadas, mientras que la tapa de rosca del dispensador mantiene las bolsas seguras (¡no se caen ni se pierden!). Incluye un (1) rollo de 15 bolsas con aroma lavanda.",
+      "slug": "dispenser-lavanda",
       "stock": 10,
       "costo": 500,
-      "imagen": "../images/logo.png"
+      "imagen": "https://lamascoteca.com.ar/wp-content/uploads/2021/10/de8fb0cf45d13fb14b5643e5c3866ced711ede3908e10957eecdae3b9a9c312958339-1.jpeg"
    }
 ]
