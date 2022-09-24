@@ -24,29 +24,33 @@ const ItemCount = ( {stock, initial, onAdd} ) => {
       }
     }).showToast();
     
-    const borrarProductoDelCarrito = () => {
+    const restar = () => {
       if (count <= 0){
         notificarError("No se puede borrar el producto, debido a que no puede restar menos de 0.")
       }else{
         setCount(count - 1);
       }
     };
-    const agregarProductoAlCarrito = () => {
+    const sumar = () => {
       if(count < stock){
         setCount(count + 1);
         notificarProductoAgregado();   
       }
       else notificarError("La cantidad que deseas agregar supera el stock actual, disculpá las molestias."); 
     };
+
+    const addCart = () =>{
+      onAdd(count);
+    }
  return(
     <>
     <div className='parteSuperiorCardFooter'>
-        {<button disabled={count===initial}  onClick={borrarProductoDelCarrito}>-</button>}
+        {<button disabled={count===initial}  onClick={restar}>-</button>}
         <p> {count}</p>
-        {<button disabled={count===stock} onClick={agregarProductoAlCarrito}>+</button>}
+        {<button disabled={count===stock} onClick={sumar}>+</button>}
     </div>
     <div className='btnFooter'>
-        {<button className='btnAgregarCarrito' disabled={count===stock} onClick={agregarProductoAlCarrito}>Agregar al carrito</button> }
+        {<button className='btnAgregarCarrito' onClick={addCart} >Agregar al carrito</button> }
     </div>
     </>
   )
