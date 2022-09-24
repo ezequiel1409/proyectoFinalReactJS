@@ -1,10 +1,10 @@
 import React from 'react'
-import {useState} from 'react';
+import { useState } from 'react';
 import Toastify from 'toastify-js'
 import "toastify-js/src/toastify.css"
 const ItemCount = ( {stock, initial, onAdd} ) => {
     const [count, setCount] = useState(initial);
-    const notificarProductoAgregado = () => Toastify({
+    let notificarProductoAgregado = () => Toastify({
         text: "Producto agregado al carrito!",
         duration: 2000,
         close: true, 
@@ -12,8 +12,8 @@ const ItemCount = ( {stock, initial, onAdd} ) => {
         position: "right",
         stopOnFocus: true, 
     }).showToast();
-    const notificarError = () => Toastify({
-      text: "No se pudo agregar el producto debido a falta de stock, disculpe las molestías.",
+    let notificarError = (text) => Toastify({
+      text: text,
       duration: 2000,
       close: true, 
       gravity: "bottom",
@@ -23,21 +23,25 @@ const ItemCount = ( {stock, initial, onAdd} ) => {
         background: "#e74c3c",
       }
     }).showToast();
+    
     const borrarProductoDelCarrito = () => {
-      setCount(count - 1);
-      console.log(count)
+      if (count <= 0){
+        notificarError("No se puede borrar el producto, debido a que no puede restar menos de 0.")
+      }else{
+        setCount(count - 1);
+      }
     };
     const agregarProductoAlCarrito = () => {
       if(count < stock){
         setCount(count + 1);
         notificarProductoAgregado();   
       }
-      else notificarError(); 
+      else notificarError("La cantidad que deseas agregar supera el stock actual, disculpá las molestias."); 
     };
  return(
     <>
     <div className='parteSuperiorCardFooter'>
-        {<button disabled={count===initial} onClick={borrarProductoDelCarrito}>-</button>}
+        {<button disabled={count===initial}  onClick={borrarProductoDelCarrito}>-</button>}
         <p> {count}</p>
         {<button disabled={count===stock} onClick={agregarProductoAlCarrito}>+</button>}
     </div>
