@@ -4,7 +4,7 @@ import { CartContext } from "../../context/CartContext";
 import ItemCount from "./ItemCount"
 import './itemDetail.css';
 const ItemDetail = ( {item}) => {
-  const [counter, setCounter] = useState(0)
+  const [counter, setCounter] = useState(1)
   const { addProduct, isInCart } = useContext(CartContext)
   const onAdd = (quantity) => {
     setCounter(quantity);
@@ -22,7 +22,7 @@ const ItemDetail = ( {item}) => {
               <h2>{item.nombre}</h2>
             </div>
             <div className="articlePrice">
-              <h3>{item.costo}</h3>
+              <h3>${item.costo}</h3>
             </div>
             <div className="articleDescription">
               {item.descripcion}
@@ -36,6 +36,11 @@ const ItemDetail = ( {item}) => {
                       <Link to={'/cart'}> 
                         <button>
                           <span>Ir hacia el carrito</span>
+                        </button>
+                      </Link>
+                      <Link to={'/'}> 
+                        <button>
+                          <span>Seguir comprando</span>
                         </button>
                       </Link>
                     </div>

@@ -4,7 +4,7 @@ export const CartProvider = ({ children }) => {
     const [item, setItem] = useState([]);
     const addProduct = (product, quantity) => {
         // debugger;
-        const actualProduct = { id: product.id, price: product.price, quantity: quantity, src: product.src, title: product.title, description: product.description }
+        const actualProduct = { id: product.id, price: product.costo, quantity: quantity, src: product.imagen, title: product.nombre, description: product.descripcion }
         if (!isInCart(actualProduct.id)) {
             setItem(old => [...old, actualProduct])
         } else {
@@ -20,20 +20,27 @@ export const CartProvider = ({ children }) => {
     const removeItem = (itemID)  =>{
         setItem(item.filter(productoABorrar => productoABorrar.id !== itemID))
     } 
-    // const clearCart = ()  => {
-    //     return clear(item);
-    // }
+    const clearCart = ()  => {
+        setItem([]);
+    }
     const totalCart = () => {
         let total = 0;
         item.forEach(actual => {
-             actual.quantity >1 ? total += (actual.quantity*actual.price) : total += actual.price
+             actual.quantity > 1 ? total += (actual.quantity*actual.price) : total += actual.price
         })
         return total;
     }
     const getProducts = () =>{
         return item;
     }
-    return (<CartContext.Provider value={{ item, addProduct, isInCart, removeItem, getProducts, totalCart }}>
+    const getQuantityCart = () => {
+        let aux = 0;
+        item.forEach(actual => {
+            actual.quantity > 1 ? aux += (actual.quantity+actual.quantity) : console.log(aux)
+       })
+       return aux;
+    }
+    return (<CartContext.Provider value={{ item, addProduct, isInCart, removeItem, getProducts, clearCart, totalCart }}>
         {children}
     </CartContext.Provider>)
 }

@@ -14,7 +14,7 @@ const Item = ({id, nombre, costo, imagen,  stock }) => {
                     </div>
                     <div className="cardBody">
                         <h2>{nombre}</h2>
-                        <h3>{costo}</h3>
+                        <h3>${costo}</h3>
                     </div>
                     <div className="cardFooter">
                     <Link to={`/producto/item/${id}`}>

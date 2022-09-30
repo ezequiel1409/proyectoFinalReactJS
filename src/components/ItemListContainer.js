@@ -15,7 +15,7 @@ const ItemListContainer = () => {
                       }else{
                         reject("Hubo un error, probá de nuevo!");
                       }
-                  }, 3000);
+                  }, 1000);
               });
           };
             getProductos().then((data) => {

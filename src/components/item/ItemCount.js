@@ -34,13 +34,13 @@ const ItemCount = ( {stock, initial, onAdd} ) => {
     const sumar = () => {
       if(count < stock){
         setCount(count + 1);
-        notificarProductoAgregado();   
       }
       else notificarError("La cantidad que deseas agregar supera el stock actual, disculpá las molestias."); 
     };
 
     const addCart = () =>{
       onAdd(count);
+      notificarProductoAgregado();  
     }
  return(
     <>
@@ -49,6 +49,7 @@ const ItemCount = ( {stock, initial, onAdd} ) => {
         <p> {count}</p>
         {<button disabled={count===stock} onClick={sumar}>+</button>}
     </div>
+    
     <div className='btnFooter'>
         {<button className='btnAgregarCarrito' onClick={addCart} >Agregar al carrito</button> }
     </div>
